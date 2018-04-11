@@ -1,57 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.android.myquiz.MainActivity"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.android.myquiz.MainActivity"
-    android:orientation="vertical">
+    android:fillViewport="true" >
+
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:paddingLeft="8dp"
     android:paddingRight="8dp"
-    android:orientation="vertical"
-    >
-    <TextView
+    android:layout_alignParentBottom="true"
+    android:orientation="vertical">
+    <ImageView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="My Quiz"
-        android:textSize="20sp"
-        android:textAlignment="center"
-        android:padding="16dp"
-        android:id="@+id/header"
-        android:textColor="@android:color/black"
-/>
+        android:layout_height="100dp"
+        android:paddingBottom="16dp"
+        android:src="@drawable/new_banner"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/question1"
-        android:textSize="16sp"
+        android:textSize="20sp"
         android:textColor="@android:color/black"
         android:text="1.The energy of motion is called?"/>
     <RadioGroup
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
         android:id="@+id/radioGroup1">
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textSize="18sp"
             android:id="@+id/answer1A"
             android:text="light energy"/>
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textSize="18sp"
             android:id="@+id/answer1B"
             android:text="kinetic energy"/>
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textSize="18sp"
             android:id="@+id/answer1C"
             android:text="nuclear energy"/>
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textSize="18sp"
             android:id="@+id/answer1D"
             android:text="thermal energy"/>
     </RadioGroup>
@@ -59,48 +60,59 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/question2"
-        android:textSize="16sp"
+        android:textSize="20sp"
         android:textColor="@android:color/black"
         android:text="2.What did Albert Einstein invent?"/>
     <CheckBox
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:textSize="18sp"
         android:id="@+id/answer2A"
         android:text="Quantum Theory of Light"/>
     <CheckBox
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:textSize="18sp"
         android:id="@+id/answer2B"
         android:text="E=mc2"/>
     <CheckBox
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:textSize="18sp"
         android:id="@+id/answer2C"
         android:text="General Theory of Relativity"/>
     <CheckBox
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:textSize="18sp"
         android:id="@+id/answer2D"
         android:text="Theory of Gravity"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/question3"
-        android:textSize="16sp"
+        android:textSize="20sp"
         android:textColor="@android:color/black"
         android:text="3.energy of moving electrons is kinetic energy."/>
 <RadioGroup
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
+    android:layout_marginLeft="8dp"
     android:id="@+id/radioGroup3">
     <RadioButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textSize="18sp"
         android:id="@+id/right"
         android:text="True"/>
     <RadioButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textSize="18sp"
         android:id="@+id/wrong"
         android:text="False"/>
 </RadioGroup>
@@ -108,24 +120,26 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/question4"
-        android:textSize="16sp"
+        android:textSize="20sp"
         android:textColor="@android:color/black"
         android:text="4.The energy of motion"/>
     <EditText
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:cursorVisible="false"
+        android:onClick="editClicked"
+        android:textSize="18sp"
+        android:singleLine="true"
         android:id="@+id/answer4"/>
-
-</LinearLayout>
-
     <Button
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:background="#5555b0"
-        android:textSize="20dp"
+        android:textSize="20sp"
         android:text="Submit"
         android:textColor="@android:color/black"
         android:onClick="submit"/>
 </LinearLayout>
 
+</ScrollView>

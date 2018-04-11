@@ -5,12 +5,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.Toast;
-
 
 public class MainActivity extends AppCompatActivity {
 
@@ -24,9 +23,14 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
     }
 
-
+    public void editClicked(View view)
+    {
+        EditText editText = findViewById(R.id.answer4);
+        editText.setCursorVisible(true);
+    }
     public void submit(View view){
         RadioGroup radioGroup1 = findViewById(R.id.radioGroup1);
         answer = radioGroup1.getCheckedRadioButtonId();
@@ -60,8 +64,6 @@ public class MainActivity extends AppCompatActivity {
 
         message = "You have " + totalScore + " correct answers out of " + totalQuestions;
 
-        /*Toast toast = Toast.makeText(getApplicationContext(),toastMessage,Toast.LENGTH_LONG);
-        toast.show();*/
 
         // Reset all the fields.
         totalScore = 0;
