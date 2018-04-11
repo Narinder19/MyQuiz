@@ -11,6 +11,8 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
+import android.widget.Toast;
+
 public class MainActivity extends AppCompatActivity {
 
     int totalQuestions = 4;
@@ -67,6 +69,9 @@ public class MainActivity extends AppCompatActivity {
 
         // Reset all the fields.
         totalScore = 0;
+        Toast toast = Toast.makeText(getApplicationContext(),message,Toast.LENGTH_LONG);
+        toast.show();
+
         radioGroup1.clearCheck();
         radioGroup3.clearCheck();
         checkBox1.setChecked(false);
@@ -75,9 +80,9 @@ public class MainActivity extends AppCompatActivity {
         checkBox4.setChecked(false);
         editText.setText("");
 
-        Intent scoreIntent = new Intent(MainActivity.this, ScoreActivity.class);
+/*        Intent scoreIntent = new Intent(MainActivity.this, ScoreActivity.class);
         scoreIntent.putExtra("score",message );
-        startActivity(scoreIntent);
+        startActivity(scoreIntent);*/
 
     }
 }
