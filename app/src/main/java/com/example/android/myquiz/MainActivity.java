@@ -67,11 +67,12 @@ public class MainActivity extends AppCompatActivity {
         message = "You have " + totalScore + " correct answers out of " + totalQuestions;
 
 
-        // Reset all the fields.
+        //Using toast to display result
         totalScore = 0;
         Toast toast = Toast.makeText(getApplicationContext(),message,Toast.LENGTH_LONG);
         toast.show();
 
+        // Reset all the fields.
         radioGroup1.clearCheck();
         radioGroup3.clearCheck();
         checkBox1.setChecked(false);
@@ -80,6 +81,7 @@ public class MainActivity extends AppCompatActivity {
         checkBox4.setChecked(false);
         editText.setText("");
 
+        //Using intent to display result
 /*        Intent scoreIntent = new Intent(MainActivity.this, ScoreActivity.class);
         scoreIntent.putExtra("score",message );
         startActivity(scoreIntent);*/
